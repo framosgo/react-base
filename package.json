@@ -1,0 +1,103 @@
+{
+  "name": "react-base",
+  "version": "0.0.1",
+  "description": "React starter kit",
+  "private": true,
+  "scripts": {
+    "logo": "node ./src/base/conf/.react-base/logo.js",
+    "clean": "rimraf dist/",
+    "generate:dll": "cross-env NODE_ENV=dll webpack --mode=production --config webpack/webpack.config.dll.babel.js",
+    "build": "npm run logo && cross-env NODE_ENV=production webpack --mode production --config webpack/webpack.config.prod.babel.js",
+    "start": "npm run logo && cross-env NODE_ENV=development webpack-dev-server --mode development --config webpack/webpack.config.dev.babel.js",
+    "server": "npm run build && cross-env NODE_ENV=production node server/",
+    "postinstall": "npm run generate:dll"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-router",
+    "immutableJS",
+    "webpack"
+  ],
+  "author": "Fernando Ramos",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "assets-webpack-plugin": "^3.9.7",
+    "autoprefixer": "^9.4.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.0.1",
+    "eslint": "^5.10.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "immutable": "^4.0.0-rc.12",
+    "mini-css-extract-plugin": "^0.5.0",
+    "postcss-clean": "^1.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-mixins": "^6.2.1",
+    "postcss-modules-extract-imports": "^2.0.0",
+    "postcss-nested": "^4.1.1",
+    "postcss-reporter": "^6.0.0",
+    "postcss-url": "^8.0.0",
+    "precss": "^4.0.0",
+    "progress-bar-webpack-plugin": "^1.11.0",
+    "react-hot-loader": "^4.6.2",
+    "redux-logger": "^3.0.6",
+    "rimraf": "^2.6.2",
+    "standard": "^12.0.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "classnames": "^2.2.6",
+    "create-reduxreducer": "^1.0.0",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.4",
+    "google-map-react": "^1.1.2",
+    "history": "^4.7.2",
+    "isomorphic-fetch": "^2.2.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-ink": "^6.4.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.1",
+    "redux-req-middleware": "^1.0.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties"
+      ]
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "/dist/*"
+    ]
+  }
+}
