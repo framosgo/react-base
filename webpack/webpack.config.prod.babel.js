@@ -17,7 +17,6 @@ export const entry = {
 
 export const output = {
   path: common.buildPath,
-  publicPath: '/',
   library: '[name]',
   filename: '[name].[hash].js',
   sourceMapFilename: '[name].map',
@@ -86,6 +85,16 @@ export const plugins = [
     inject: 'body',
     filename: 'index.html',
     minify: true,
-    template: path.resolve(common.clientPath, 'index.html')
+    template: path.resolve(common.clientPath, 'index.html'),
+    chunksSortMode: (a, b) => {
+      const order = ['vendor', 'app']
+      if (order.indexOf(a.names[0]) > order.indexOf(b.names[0])) {
+        return 1
+      }
+      if (order.indexOf(a.names[0]) < order.indexOf(b.names[0])) {
+        return -1
+      }
+      return 0
+    }
   })
 ].concat(common.plugins)
