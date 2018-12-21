@@ -14,7 +14,7 @@ export const LOGO_MOCK = {
   alt: 'React Base!',
   name: 'ReactBaseLogo',
   width: 500,
-  src: '/assets/images/react-base-logo.png'
+  src: 'assets/images/logo.png'
 }
 
 export default {
