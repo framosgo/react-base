@@ -22,6 +22,12 @@ export const entry = {
     'prop-types',
     'classnames',
     'react-redux',
+    'react-router-dom',
+    'immutable',
+    'create-reduxreducer',
+    'history',
+    'recompose',
+    'redux-req-middleware',
     'isomorphic-fetch'
   ]
 }
