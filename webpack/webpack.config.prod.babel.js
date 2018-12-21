@@ -77,7 +77,7 @@ export const plugins = [
     context: path.join(__dirname),
     manifest: require('../dist/dlls/vendor-manifest.json')
   }),
-  new CopyWebpackPlugin([{ from: path.resolve(__dirname, '../src/app/assets'), to: common.assetsPath }]),
+  new CopyWebpackPlugin([{ from: path.resolve(__dirname, '../src/App/assets'), to: common.assetsPath }]),
   new webpack.NoEmitOnErrorsPlugin(),
   new MiniCssExtractPlugin({ filename: 'styles.[contenthash].css', allChunks: true }),
   new HtmlWebpackPlugin({

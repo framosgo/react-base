@@ -71,13 +71,13 @@ export const resolve = {
   extensions: ['.js', '.jsx', '.css'],
   modules: ['node_modules'],
   alias: {
-    app: path.resolve(__dirname, '../src/app'),
+    app: path.resolve(__dirname, '../src/App'),
     server: path.resolve(__dirname, '../server'),
     base: path.resolve(__dirname, '../src/base'),
     store: path.resolve(__dirname, '../src/base/store'),
-    styles: path.resolve(__dirname, '../src/app/styles'),
+    styles: path.resolve(__dirname, '../src/App/styles'),
     mocks: path.resolve(__dirname, '../server/api/mocks'),
-    containers: path.resolve(__dirname, '../src/app/containers'),
-    components: path.resolve(__dirname, '../src/app/components')
+    containers: path.resolve(__dirname, '../src/App/containers'),
+    components: path.resolve(__dirname, '../src/App/components')
   }
 }

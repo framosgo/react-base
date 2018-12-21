@@ -4,7 +4,7 @@ import Calculator from 'containers/Calculator/'
 import Main from 'containers/Main/'
 import WeatherStations from 'containers/WeatherStations/'
 
-const Routes = () => (
+const App = () => (
   <>
     <Route exact path='/' component={Main} />
     <Route path='/calculator' component={Calculator} />
@@ -12,4 +12,4 @@ const Routes = () => (
   </>
 )
 
-export default Routes
+export default App

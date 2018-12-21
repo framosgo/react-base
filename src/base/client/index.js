@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import InitialState from 'store/InitialState'
 import ConfigureStore from 'store/ConfigureStore'
 
-import Routes from '../Routes'
+import App from '../../App'
 
 const history = createBrowserHistory()
 
@@ -16,7 +16,7 @@ const store = ConfigureStore(history, InitialState)
 render(
   <Provider store={store}>
     <BrowserRouter basename='/'>
-      <Routes />
+      <App />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')
