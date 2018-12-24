@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { Record } from 'immutable'
 import Display from './components/Display'
 import ButtonPannel from './components/ButtonPannel'
-import styles from './styles.css'
+import styles from './styles'
 
 class Calculator extends Component {
   static proptypes = {

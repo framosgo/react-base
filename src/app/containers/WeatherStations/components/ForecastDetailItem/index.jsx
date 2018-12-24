@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import dateformat from 'dateformat'
-import styles from './styles.css'
+import styles from './styles'
 
 const propTypes = {
   item: PropTypes.object.isRequired

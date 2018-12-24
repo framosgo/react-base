@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import ForecastDetailItem from '../ForecastDetailItem'
 
-import styles from './styles.css'
+import styles from './styles'
 
 const propTypes = {
   forecast: PropTypes.instanceOf(Map).isRequired

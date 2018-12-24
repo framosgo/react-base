@@ -4,7 +4,7 @@ import { pure } from 'recompose'
 
 import GoogleMap from 'google-map-react'
 
-import styles from './styles.css'
+import styles from './styles'
 
 import MapMarker from '../MapMarker'
 

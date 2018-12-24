@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { pure } from 'recompose'
 
-import styles from './styles.css'
+import styles from './styles'
 
 const propTypes = {
   main: PropTypes.object.isRequired

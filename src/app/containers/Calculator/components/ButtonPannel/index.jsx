@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 
 import Button from '../Button'
-import styles from './styles.css'
+import styles from './styles'
 import * as Actions from '../../actions'
 import ActionTypes from '../../actionTypes'
 

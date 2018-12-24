@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 import Actions from './actions'
 import Logo from '../../components/Logo'
 import LinkButton from '../../components/LinkButton'
-import styles from './styles.css'
+import styles from './styles'
 
 const propTypes = {
   dispatch: PropTypes.func.isRequired,

@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom'
 import * as Actions from './actions'
 import MapBox from './components/MapBox'
 import ForecastDetail from './components/ForecastDetail'
-import styles from './styles.css'
+import styles from './styles'
 
 export class WeatherStations extends Component {
   static propTypes = {

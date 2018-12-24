@@ -2,7 +2,7 @@ import React from 'react'
 import { Record } from 'immutable'
 import PropTypes from 'prop-types'
 import dateformat from 'dateformat'
-import styles from './styles.css'
+import styles from './styles'
 
 const propTypes = {
   details: PropTypes.instanceOf(Record).isRequired

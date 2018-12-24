@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.css'
+import styles from './styles'
 
 const propTypes = {
   value: PropTypes.string.isRequired,

@@ -4,6 +4,8 @@ import Calculator from 'containers/Calculator/'
 import Main from 'containers/Main/'
 import WeatherStations from 'containers/WeatherStations/'
 
+import './styles'
+
 const App = () => (
   <>
     <Route exact path='/' component={Main} />

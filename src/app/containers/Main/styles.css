@@ -1,4 +1,4 @@
-@import '../../styles/base.css';
+@import '../../../base/styles/variables';
 
 .Main {
   align-items: center;
