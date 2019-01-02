@@ -1,4 +1,4 @@
-import { Record } from 'immutable'
+import { Record } from 'immutable';
 
 const ForecastModel = Record({
   clouds: 0,
@@ -9,6 +9,6 @@ const ForecastModel = Record({
   speed: 0,
   temp: {},
   weather: []
-})
+});
 
-export default ForecastModel
+export default ForecastModel;

@@ -1,4 +1,4 @@
-import { Record } from 'immutable'
+import { Record } from 'immutable';
 
 const MainModel = Record({
   id: 0,
@@ -6,10 +6,10 @@ const MainModel = Record({
   alt: '',
   name: '',
   width: 0
-})
+});
 
 const setInitialState = initialState => (
   initialState.Main = new MainModel()
-)
+);
 
-export { MainModel, setInitialState }
+export { MainModel, setInitialState };

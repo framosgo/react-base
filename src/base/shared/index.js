@@ -1,4 +1,4 @@
-import './console'
-import './CreateReducer'
-import './Errors'
-import './ModelHelper'
+import './console';
+import './CreateReducer';
+import './Errors';
+import './ModelHelper';

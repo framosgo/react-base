@@ -1,18 +1,18 @@
-import webpack from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import path from 'path'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
-import * as common from './webpack.common'
+import * as common from './webpack.common';
 
-export const cache = true
-export const devtool = 'cheap-module-eval-source-map'
-export const context = common.context
-export const resolve = common.resolve
+export const cache = true;
+export const devtool = 'cheap-module-eval-source-map';
+export const context = common.context;
+export const resolve = common.resolve;
 
 export const entry = {
   app: common.clientPath
-}
+};
 
 export const devServer = {
   contentBase: common.basePath,
@@ -20,7 +20,7 @@ export const devServer = {
   port: 9000,
   historyApiFallback: true,
   hot: true
-}
+};
 
 export const output = {
   path: common.buildPath,
@@ -29,7 +29,7 @@ export const output = {
   filename: '[name].js',
   sourceMapFilename: '[name].map',
   chunkFilename: '[name].chunk.js'
-}
+};
 
 export const module = {
   rules: common.module.rules.concat([
@@ -63,7 +63,7 @@ export const module = {
       ]
     }
   ])
-}
+};
 
 export const plugins = [
   new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development') }),
@@ -80,4 +80,4 @@ export const plugins = [
     template: path.resolve(common.clientPath, 'index.html')
   })
 ]
-  .concat(common.plugins)
+  .concat(common.plugins);

@@ -1,19 +1,19 @@
-import path from 'path'
-import webpack from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import path from 'path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-import * as common from './webpack.common'
+import * as common from './webpack.common';
 
-export const cache = true
-export const devtool = ''
-export const context = common.context
-export const resolve = common.resolve
+export const cache = true;
+export const devtool = '';
+export const context = common.context;
+export const resolve = common.resolve;
 export const entry = {
   app: common.clientPath,
   vendor: common.entry.vendor
-}
+};
 
 export const output = {
   path: common.buildPath,
@@ -21,7 +21,7 @@ export const output = {
   filename: '[name].[hash].js',
   sourceMapFilename: '[name].map',
   chunkFilename: '[name].[hash].chunk.js'
-}
+};
 
 export const module = {
   rules: common.module.rules.concat([
@@ -56,7 +56,7 @@ export const module = {
       ]
     }
   ])
-}
+};
 
 export const optimization = {
   minimize: true,
@@ -69,7 +69,7 @@ export const optimization = {
       }
     }
   }
-}
+};
 
 export const plugins = [
   new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('production') }),
@@ -87,14 +87,14 @@ export const plugins = [
     minify: true,
     template: path.resolve(common.clientPath, 'index.html'),
     chunksSortMode: (a, b) => {
-      const order = ['vendor', 'app']
+      const order = ['vendor', 'app'];
       if (order.indexOf(a.names[0]) > order.indexOf(b.names[0])) {
-        return 1
+        return 1;
       }
       if (order.indexOf(a.names[0]) < order.indexOf(b.names[0])) {
-        return -1
+        return -1;
       }
-      return 0
+      return 0;
     }
   })
-].concat(common.plugins)
+].concat(common.plugins);

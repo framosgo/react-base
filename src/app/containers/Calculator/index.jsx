@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
-import { Record } from 'immutable'
-import Display from './components/Display'
-import ButtonPannel from './components/ButtonPannel'
-import styles from './styles'
+import { Record } from 'immutable';
+import Display from './components/Display';
+import ButtonPannel from './components/ButtonPannel';
+import styles from './styles';
 
 class Calculator extends Component {
   static proptypes = {
@@ -13,14 +13,14 @@ class Calculator extends Component {
 
   render () {
     return (
-      <div className={styles.Calculator}>
+      <div className={ styles.Calculator }>
         <div>
           <Display />
           <ButtonPannel />
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Calculator
+export default Calculator;
