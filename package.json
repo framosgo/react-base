@@ -41,7 +41,10 @@
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.11.1",
-    "file-loader": "^2.0.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.12.1",
+    "file-loader": "^3.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "immutable": "^4.0.0-rc.12",
@@ -59,7 +62,6 @@
     "react-hot-loader": "^4.6.2",
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.2",
-    "standard": "^12.0.1",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.28.3",
@@ -85,22 +87,5 @@
     "recompose": "^0.30.0",
     "redux": "^4.0.1",
     "redux-req-middleware": "^1.0.4"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-proposal-class-properties"
-      ]
-    ]
-  },
-  "standard": {
-    "parser": "babel-eslint",
-    "ignore": [
-      "/dist/*"
-    ]
   }
 }
