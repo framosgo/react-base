@@ -5,7 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 addDecorator(withNotes)
 addDecorator(withKnobs)
 
-const req = require.context('../src/App/components', true, /stories$/)
+const req = require.context('../src/app/components', true, /stories$/)
 
 function loadStories() {
   req.keys().forEach(filename => req(filename))

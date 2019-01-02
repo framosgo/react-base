@@ -72,7 +72,7 @@ export const plugins = [
     context: common.buildPath,
     manifest: require('../dist/dlls/vendor-manifest.json')
   }),
-  new CopyWebpackPlugin([{ from: path.resolve(__dirname, '../src/App/assets'), to: common.assetsPath }]),
+  new CopyWebpackPlugin([{ from: path.resolve(__dirname, '../src/app/assets'), to: common.assetsPath }]),
   new HtmlWebpackPlugin({
     title: 'React base',
     inject: 'body',
