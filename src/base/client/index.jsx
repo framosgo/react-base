@@ -13,11 +13,19 @@ const history = createBrowserHistory();
 
 const store = ConfigureStore(history, InitialState);
 
-render(
+const ReactApp = () => (
   <Provider store={ store }>
     <Router basename="/">
       <Routes />
     </Router>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );
+
+let App = ReactApp;
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line global-require
+  const { hot } = require('react-hot-loader');
+  App = hot(module)(ReactApp);
+}
+
+render(<App />, document.getElementById('root'));

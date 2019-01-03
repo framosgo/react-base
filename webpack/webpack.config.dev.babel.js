@@ -43,6 +43,7 @@ export const module = {
       test: /\.css$/,
       exclude: /node_modules/,
       use: [
+        'css-hot-loader',
         {
           loader: 'style-loader'
         },
