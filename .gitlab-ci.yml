@@ -76,7 +76,6 @@ ci_front:
     - npm install -g yarn@1.13.0
     - yarn install --frozen-lockfile
     - yarn lint
-    - yarn generate:dll
     - yarn build
 
 
