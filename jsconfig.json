@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "server/*": ["server/*"],
+      "base/*": ["src/base/*"],
+      "store/*": ["src/base/store/*"],
+      "containers/*": ["src/app/containers/*"],
+      "components/*": ["src/app/components/*"],
+      "conf/*": ["src/app/conf/*"],
+      "server": ["server/index.js"],
+      "base": ["src/base/index.js"],
+      "store": ["src/base/store/index.js"],
+      "conf": ["src/app/conf/index.js"]
+    }
+  }
+}

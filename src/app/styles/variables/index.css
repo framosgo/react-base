@@ -1,0 +1,26 @@
+:root {
+  --logoWidth: 500px;
+  --primary-color: rgb(0, 122, 255);
+  --secondary-color: rgb(255, 59, 103);
+  --primary-background-color: #ffffff;
+  --white: #ffffff;
+
+  /* Fields */
+  --field-border-color: #cbcbcb;
+  --error-border-color: #ff0000;
+  --field-placeholder-color: #9b9b9b;
+  --error-color: #ff3b30;
+
+  --aquanima-red: #da291c;
+  --aquanima-red-disabled: #e3c0bd;
+  --aquanima-blue: #0c2340;
+  --aquanima-aqua: #64ccc9;
+  --aquanima-link: #37a8a4;
+
+  --input-field: #cbcbcb;
+
+  --background: #f4f4f4;
+
+  --blue-disabled: rgba(12, 35, 64, 0.5);
+}
+

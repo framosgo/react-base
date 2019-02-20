@@ -1,0 +1,81 @@
+nav {
+  display: flex;
+  flex-flow: column;
+  width: 13rem;
+  box-shadow: -5px 0px 21px grey;
+  transition-duration: 0.3s;
+  z-index: 1;
+}
+
+.navCollapsed {
+  width: 2rem;
+  > .collapserIcon {
+    justify-content: flex-start;
+    padding: 10px 7px;
+  }
+}
+
+.subNav {
+  display: flex;
+  flex-flow: column;
+  > a {
+    padding: 5px 5px 5px 20px;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+}
+
+.section {
+  > div {
+    background: transparent;
+    border: 0;
+  }
+}
+
+.chevron {
+  border-width: 2px 2px 0 0;
+  border-style: solid;
+  border-color: lightgray;
+  width: 6px;
+  height: 6px;
+  transition-duration: 0.3s;
+}
+
+.chevronUp {
+  composes: chevron;
+  transform: rotate(-45deg);
+}
+
+.chevronRight {
+  composes: chevron;
+  transform: rotate(45deg);
+}
+
+.chevronDown {
+  composes: chevron;
+  transform: rotate(135deg);
+}
+
+.chevronLeft {
+  composes: chevron;
+  transform: rotate(-135deg);
+}
+
+.collapserIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 30px;
+  cursor: pointer;
+  padding: 10px;
+
+  > div {
+    height: 8px;
+    width: 8px;
+    margin-left: -3px;
+  }
+}

@@ -1,0 +1,84 @@
+#this configuration will enable cache for the following directories
+#they will be restored on each execution
+#this is a reference configuracion for react
+#
+cache:
+  paths:
+    - .m2/repository
+    - .npm
+before_script:
+#this task will do the release
+#will only execute on changes on master
+
+stages:
+  - build
+  - audit
+#  - deploy
+release_audit:
+  only:
+    refs:
+      - master
+      - develop
+    variables:
+      - $AUDIT
+  stage: audit
+  image: node:10.9.0
+  script:
+    # this will echo timestamp with the commands so we know how long takes each step
+    - export PS4='\t '
+    - set -x;
+    #this will enable npm cache
+    - npm config set cache $CI_PROJECT_DIR/.npm
+    - yarn audit
+release_front:
+  stage: build
+  only:
+    refs:
+      - master
+      - develop
+  image: node:10.9.0
+  script:
+    # this will echo timestamp with the commands so we know how long takes each step
+    - export PS4='\t '
+    - set -x;
+    #this will enable npm cache
+    - npm config set cache $CI_PROJECT_DIR/.npm
+    - npm install -g yarn@1.13.0
+    # --production switch so dev dependencies are not downloaded
+    # https://github.com/yarnpkg/yarn/issues/696
+    # --frozen-lockfile to avoid inconsistency between package.json and yarn.lock
+    # this will make yarn.lock the source of truth for the list of depenencies and their versions
+    # https://github.com/yarnpkg/yarn/issues/5847
+    # https://github.com/yarnpkg/yarn/issues/5529
+    - yarn install --frozen-lockfile
+    - yarn lint
+    - yarn generate:dll
+    - yarn build
+    #initially only lint is called, here a build manager should be declared
+    #- yarn build
+
+    - echo "build sucessfull finished at `date +%d/%m/%Y-%H:%M:%S` "
+    #- cd dist && zip -r -X ../$CI_PROJECT_NAME.zip .
+  #this command will make a copy of the dist directory and store for future download
+  artifacts:
+    paths:
+      - dist/
+#this is the ci process for feature branches
+#should be much more reduced in time
+#will only execute on feature branches
+ci_front:
+  stage: build
+  only:
+    refs:
+      - /^feat.*$/
+  image: node:10.9.0
+  script:
+    - npm config set cache $CI_PROJECT_DIR/.npm
+    - npm install -g yarn@1.13.0
+    - yarn install --frozen-lockfile
+    - yarn lint
+    - yarn generate:dll
+    - yarn build
+
+
+    #- yarn build

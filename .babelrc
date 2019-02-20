@@ -1,0 +1,35 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-class-properties",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "app": "./src/app",
+          "env": "./src/env",
+          "server": "./server",
+          "base": "./src/base",
+          "store": "./src/base/store",
+          "styles": "./src/app/styles",
+          "assets": "./src/app/assets",
+          "routes": "./src/app/routes",
+          "containers": "./src/app/containers",
+          "components": "./src/app/components",
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": []
+    }
+  }
+}
