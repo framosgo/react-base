@@ -33,7 +33,7 @@ exports.color = function (type, str) {
     type = 'default';
   }
 
-  return `\u001b[${exports.colors[type]}m${str}\u001b[0m`;
+  return `\u001b[${ exports.colors[type] }m${ str }\u001b[0m`;
 };
 
 exports.line = function () {

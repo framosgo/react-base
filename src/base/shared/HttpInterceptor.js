@@ -7,7 +7,7 @@ export const initializeInterceptor = instance => {
       const AUTH_TOKEN = '';// fixme Cookies.get('token');
 
       if (AUTH_TOKEN) {
-        const auth = { Authorization: `Bearer ${AUTH_TOKEN}` };
+        const auth = { Authorization: `Bearer ${ AUTH_TOKEN }` };
         conf.headers = { ...config.headers, ...auth };
       }
 
