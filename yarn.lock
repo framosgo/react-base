@@ -621,7 +621,7 @@
     pirates "^4.0.0"
     source-map-support "^0.5.9"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0":
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
   dependencies:
@@ -2956,7 +2956,7 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
 
-history@4.7.2, history@^4.7.2:
+history@4.7.2:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
   dependencies:
@@ -2965,6 +2965,18 @@ history@4.7.2, history@^4.7.2:
     resolve-pathname "^2.2.0"
     value-equal "^0.4.0"
     warning "^3.0.0"
+
+history@^4.8.0-beta.0:
+  version "4.8.0-beta.0"
+  resolved "https://registry.yarnpkg.com/history/-/history-4.8.0-beta.0.tgz#8b48c1354ac290341c0d73dd33c763bd140531f4"
+  integrity sha512-LDjPtGgAFDO3lZ+bumN67k0R3GWvUBLLgRJpFU2mnJ1w+D5rEbiZC1c37yPla7tx/dUzVfznt5Rmttnz0MvGdA==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    loose-envify "^1.2.0"
+    resolve-pathname "^2.2.0"
+    tiny-invariant "^1.0.2"
+    tiny-warning "^1.0.0"
+    value-equal "^0.4.0"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -5414,7 +5426,7 @@ react-fast-compare@^2.0.1:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
 
-react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1:
+react-is@^16.5.2, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1:
   version "16.8.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
 
@@ -5429,28 +5441,34 @@ react-redux@6.0.0:
     prop-types "^15.6.2"
     react-is "^16.6.3"
 
-react-router-dom@4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"
+react-router-dom@4.4.0-beta.5:
+  version "4.4.0-beta.5"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.4.0-beta.5.tgz#9247379e42606e117144339af40249977d1f1f08"
+  integrity sha512-7ST248njfFXSTGjLld6kRUck14iezTs6EcgnTjaInUKhMnLFccAqfouyIzhIGZ3jnw/Yi0Q1LmiIM2HY0gn1rQ==
   dependencies:
-    history "^4.7.2"
+    "@babel/runtime" "^7.1.2"
+    history "^4.8.0-beta.0"
     invariant "^2.2.4"
     loose-envify "^1.3.1"
     prop-types "^15.6.1"
-    react-router "^4.3.1"
+    react-router "^4.4.0-beta.5"
     warning "^4.0.1"
 
-react-router@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.3.1.tgz#aada4aef14c809cb2e686b05cee4742234506c4e"
+react-router@^4.4.0-beta.5:
+  version "4.4.0-beta.6"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.4.0-beta.6.tgz#37e1d9ce2be93df397cc1feb1dcd6460ea0b236b"
+  integrity sha512-esR1UHsPpfvehX5Qn7wQrOTFsl4PxiaX3GaYvtFDSEioMsTl0zkASJBm1fXKgR9brUQX9kgiGq6XnCsiJU/82g==
   dependencies:
-    history "^4.7.2"
+    "@babel/runtime" "^7.1.2"
+    create-react-context "^0.2.2"
+    history "^4.8.0-beta.0"
     hoist-non-react-statics "^2.5.0"
-    invariant "^2.2.4"
     loose-envify "^1.3.1"
     path-to-regexp "^1.7.0"
-    prop-types "^15.6.1"
-    warning "^4.0.1"
+    prop-types "^15.6.2"
+    react-is "^16.5.2"
+    tiny-invariant "^1.0.2"
+    tiny-warning "^1.0.0"
 
 react@16.8.2:
   version "16.8.2"
@@ -6256,7 +6274,12 @@ tiny-inflate@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/tiny-inflate/-/tiny-inflate-1.0.2.tgz#93d9decffc8805bd57eae4310f0b745e9b6fb3a7"
 
-tiny-warning@^1.0.2:
+tiny-invariant@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.0.3.tgz#91efaaa0269ccb6271f0296aeedb05fc3e067b7a"
+  integrity sha512-ytQx8T4DL8PjlX53yYzcIC0WhIZbpR0p1qcYjw2pHu3w6UtgWwFJQ/02cnhOnBBhlFx/edUIfcagCaQSe3KMWg==
+
+tiny-warning@^1.0.0, tiny-warning@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.2.tgz#1dfae771ee1a04396bdfde27a3adcebc6b648b28"
 
