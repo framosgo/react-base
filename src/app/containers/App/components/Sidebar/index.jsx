@@ -31,7 +31,7 @@ class Sidebar extends Component {
           <div className={ iconClass } />
           <div className={ iconClass } />
         </div>
-        {isOpen && (
+        { isOpen && (
           <Accordion
             allowMultipleOpen={ true }
             className={ styles.accordion }
@@ -76,7 +76,7 @@ class Sidebar extends Component {
               </div>
             </div>
           </Accordion>
-        )}
+        ) }
       </nav>
     );
   }

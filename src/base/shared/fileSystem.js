@@ -31,6 +31,4 @@ function writeFile(file, content) {
   }
 }
 
-export {
-  fileExists, readDir, readFile, readLines, writeFile 
-};
+export { fileExists, readDir, readFile, readLines, writeFile };
